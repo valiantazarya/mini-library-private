@@ -1,23 +1,26 @@
 # mini-library-private
 
 How to run in Local
+
 1. npm install (install all dependencies)
 2. npm start (start the application)
 
 How to run with Docker
-1. docker build . -t <app-name>
-2. docker run -p <port>:8080 -d <app-name>
+
+1. docker build . -t ${app-name}
+2. docker run -p ${port}:8080 -d ${app-name}
 
 Getting Started
 There are 4 API in this package
-1. GET | Get All Books by Subject | http://<url>:<port>/api/books?subject=<subject>limit=<limit>&offset=<offset>
+
+1. GET | Get All Books by Subject | <http://${url}:${port}/api/books?subject=${subject}limit=${limit}&offset=${offset}>
   Request Body: -
   Responses:
   -> 200 OK, Request Accepted the requested resource or data is in the response body, even if it is empty.
     Response body:
     {
       "status": "success",
-      "error_message": null, 
+      "error_message": null,
       "data": [
         {
           "id": 2239510,
@@ -52,7 +55,7 @@ There are 4 API in this package
       "data": null
     }
 
-2. POST | Submit Pickup Schedule | http://<url>:<port>/api/books/pickup-schedules
+2. POST | Submit Pickup Schedule | <http://${url}:${port}/api/books/pickup-schedules>
   Request Body:
     {
       "cover_id": 2239510,
@@ -72,7 +75,7 @@ There are 4 API in this package
     Response body:
     {
       "status": "success",
-      "error_message": null, 
+      "error_message": null,
       "data": [
         {
           "uuid": "",
@@ -109,7 +112,7 @@ There are 4 API in this package
       "data": null
     }
 
-3. GET | Get All Pickup Schedules | http://<url>:<port>/api/books/pickup-schedules
+3. GET | Get All Pickup Schedules | <http://${url}:${port}/api/books/pickup-schedules>
   Request Body: -
   Responses:
   -> 200 OK, Request Accepted the requested resource or data is in the response body, even if it is empty.
@@ -128,7 +131,7 @@ There are 4 API in this package
       "data": null
     }
 
-4. GET | Get Pickup Schedules by UUID | http://<url>:<port>/api/books/pickup-schedules/<uuid>
+4. GET | Get Pickup Schedules by UUID | <http://${url}:${port}/api/books/pickup-schedules/${uuid}>
   Request Body: -
   Responses:
   -> 200 OK, Request Accepted the requested resource or data is in the response body, even if it is empty.
