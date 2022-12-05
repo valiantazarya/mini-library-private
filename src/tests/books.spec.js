@@ -9,8 +9,6 @@ const request = require('supertest');
 
 const axios = require("axios");
 
-const booksController = require('../controllers/booksController');
-
 const API_URL = "http://localhost:8080";
 var tempUUID = "";
 

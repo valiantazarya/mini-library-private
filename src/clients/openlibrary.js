@@ -11,7 +11,7 @@ openLibrary.clientGetBooksBySubject = async request => {
   await axios.get(`https://openlibrary.org/subjects/${cleanedSubjects}.json?limit=${param.limit}&offset=${param.offset}`)
     .then((res) => {
       res.data.works.forEach(row => {
-        books = new Book();
+        let books = new Book();
         books.cover_id = row.cover_id,
         books.key = row.key,
         books.title = row.title,
