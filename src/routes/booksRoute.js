@@ -1,6 +1,6 @@
 const CONTROLLER = require("../controllers");
 
-module.exports = (APP)=>{
+module.exports = (APP) => {
   APP.route('/api/books')
     .get(CONTROLLER.booksController.getBookBySubjects);
 
@@ -10,6 +10,6 @@ module.exports = (APP)=>{
   APP.route('/api/books/pickup-schedules')
     .get(CONTROLLER.booksController.getAllPickupSchedule);
 
-  APP.route('/api/books/pickup-schedules/:id')
+  APP.route('/api/books/pickup-schedules/:uuid')
     .get(CONTROLLER.booksController.getPickupScheduleByID);
 };

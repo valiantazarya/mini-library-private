@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/tests/*.spec.js",
+    "test": "mocha ./src/tests/*.spec.js --timeout 10000 --exit",
     "start": "node ./src/app.js"
   },
   "repository": {
@@ -25,7 +25,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
-    "node-cache": "^5.1.2"
+    "node-cache": "^5.1.2",
+    "supertest": "^6.3.2"
   },
   "devDependencies": {
     "chai": "^4.3.7",
